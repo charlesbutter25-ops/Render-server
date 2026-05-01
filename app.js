@@ -9,6 +9,12 @@ const server = app.listen(port, () => console.log(`Example app listening on port
 server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
 
+const currentDate = new Date().toLocaleDateString("en-US", {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
 
 const html = `
 <!DOCTYPE html>
@@ -19,12 +25,6 @@ const html = `
     <script>
 
     
-const currentDate = new Date().toLocaleDateString("en-US", {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
 
       setTimeout(() => {
         confetti({
