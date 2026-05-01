@@ -8,13 +8,7 @@ const server = app.listen(port, () => console.log(`Example app listening on port
 
 server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
-// Current Date
-const currentDate = new Date().toLocaleDateString("en-US", {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
+
 
 const html = `
 <!DOCTYPE html>
@@ -23,6 +17,14 @@ const html = `
     <title>Hello from Render!</title>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
+    // Current Date
+const currentDate = new Date().toLocaleDateString("en-US", {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
       setTimeout(() => {
         confetti({
           particleCount: 100,
