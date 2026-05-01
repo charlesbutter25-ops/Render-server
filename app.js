@@ -57,16 +57,56 @@ const html = `
         margin-right: -50%;
         transform: translate(-50%, -50%);
       }
+      card {
+      width: 100%;
+      max-width: 500px;
+      padding: 40px 30px;
+      border-radius: 24px;
+
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+
+      border: 1px solid rgba(255, 255, 255, 0.2);
+
+      text-align: center;
+      color: white;
+
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+      animation: float 3s ease-in-out infinite;
+    }
+date {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
     </style>
   </head>
   <body>
-    <section>
-      Hello from Render!
-      
+    <div class="card">
+    <h1>🚀 Hello from Render!</h1>
+    <p>Your Express app is running successfully.</p>
+    <p>Beautiful, responsive, and animated UI.</p>
+
     <div class="date">
       📅 ${currentDate}
     </div>
-    </section>
+  </div>
   </body>
 </html>
 `
